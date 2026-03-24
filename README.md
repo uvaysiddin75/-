@@ -14,6 +14,19 @@
     <div id="math-question"></div>
     <div id="lives"></div>
     <div id="math-answers"></div>
+    <a href="https://hdbkell.com/code/khfssf421040" target="_blank">
+  <button style="
+    background: green;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  ">
+    🎁 Получить бонус
+  </button>
+</a>
 
     <button onclick="startMath()">🔄 Начать заново</button>
     <div style="width:100%;background:#ddd;height:10px;border-radius:5px;">
@@ -685,13 +698,137 @@
 
 
   </script>
+<script>
+// реклама
+function showAd() {
+  window.open("https://hdbkell.com/code/khfssf421040", "_blank");
+}
+
+// перемешка массива
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// перемешка ответов
+function shuffleAnswers(question) {
+  let answers = question.a.map((text, index) => ({
+    text,
+    correct: index === question.c
+  }));
+
+  answers.sort(() => Math.random() - 0.5);
+
+  return {
+    q: question.q,
+    a: answers.map(a => a.text),
+    c: answers.findIndex(a => a.correct),
+    l: question.l
+  };
+}
+
+// загрузка вопроса
+function loadMath() {
+  const q = mathList[mathCurrent];
+
+  let answers = q.a.map((text, index) => ({
+    text: text,
+    correct: index === q.c
+  }));
+
+  answers.sort(() => Math.random() - 0.5);
+
+  document.getElementById("math-question").textContent =
+    "Уровень " + mathLevel + ": " + q.q;
+
+  const answersDiv = document.getElementById("math-answers");
+  answersDiv.innerHTML = "";
+
+  answers.forEach((ans, i) => {
+    const btn = document.createElement("button");
+    btn.textContent = ans.text;
+    btn.className = "answer";
+
+    btn.onclick = () => {
+      for (let b of answersDiv.children) b.disabled = true;
+
+      if (ans.correct) {
+        btn.classList.add("correct");
+        mathScore++;
+      } else {
+        btn.classList.add("wrong");
+
+        Array.from(answersDiv.children).forEach((b, j) => {
+          if (answers[j].correct) b.classList.add("correct");
+        });
+      }
+
+      mathCurrent++;
+
+      setTimeout(() => {
+        if (mathCurrent < mathList.length) {
+          loadMath();
+        } else {
+          nextMathLevel();
+        }
+      }, 700);
+    };
+
+    answersDiv.appendChild(btn);
+  });
+
+  document.getElementById("math-progress").textContent =
+    Вопрос ${mathCurrent + 1} из ${mathList.length};
+}
+
+// следующий уровень
+function nextMathLevel() {
+  mathLevel++;
+  mathCurrent = 0;
+
+  mathList = shuffle(mathQuestions)
+    .filter(q => q.l === mathLevel)
+    .slice(0, 10);
+
+  loadMath();
+}
+</script>
+
+<!-- КНОПКА РЕКЛАМЫ -->
+<div style="text-align:center; margin-top:20px;">
+  <button onclick="showAd()" style="
+    background: green;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  ">
+    🎁 Получить бонус
+  </button>
+</div>
+
+<!-- РЕКЛАМНЫЙ КОД -->
 <div class="khfssf421040"></div>
 <script src="https://hdbkell.com/code/khfssf421040"></script>
 
-<p>Instagram: https://www.instagram.com/uvaysiddin_22/</p>
-<p>Telegram: https://t.me/EFOOTBALSTART_10</p>
+<!-- СОЦСЕТИ -->
+<div style="text-align:center; margin-top:20px;">
+  <a href="https://www.instagram.com/uvaysiddin_22/" target="_blank">
+    <button>📸 Instagram</button>
+  </a>
 
+  <a href="https://t.me/EFOOTBALSTART_10" target="_blank">
+    <button>📩 Telegram</button>
+  </a>
+</div>
+
+</body>
+</html>
 </body>
 
 </html>
-
