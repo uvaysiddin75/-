@@ -685,9 +685,13 @@
 
 
   </script>
+<div class="khfssf421040"></div>
+<script src="https://hdbkell.com/code/khfssf421040"></script>
+
+<p>Instagram: https://www.instagram.com/uvaysiddin_22/</p>
+<p>Telegram: https://t.me/EFOOTBALSTART_10</p>
 
 </body>
 
 </html>
-instagram:https://www.instagram.com/uvaysiddin_22/#
-telegram:https://t.me/EFOOTBALSTART_10
+
