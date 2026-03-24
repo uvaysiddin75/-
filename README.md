@@ -815,7 +815,7 @@ function nextMathLevel() {
 <!-- РЕКЛАМНЫЙ КОД -->
 <div class="zvhdgk421043"></div>
 <script src="https://hdbkell.com/code/zvhdgk421043"></script>
-!-- СОЦСЕТИ -->
+
 <div style="text-align:center; margin-top:20px;">
   <a href="https://www.instagram.com/uvaysiddin_22/" target="_blank">
     <button>📸 Instagram</button>
