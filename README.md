@@ -813,10 +813,9 @@ function nextMathLevel() {
 </div>
 
 <!-- РЕКЛАМНЫЙ КОД -->
-<div class="khfssf421040"></div>
-<script src="https://hdbkell.com/code/khfssf421040"></script>
-
-<!-- СОЦСЕТИ -->
+<div class="zvhdgk421043"></div>
+<script src="https://hdbkell.com/code/zvhdgk421043"></script>
+!-- СОЦСЕТИ -->
 <div style="text-align:center; margin-top:20px;">
   <a href="https://www.instagram.com/uvaysiddin_22/" target="_blank">
     <button>📸 Instagram</button>
